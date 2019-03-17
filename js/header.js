@@ -23,12 +23,7 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+
 
 
 //For signup modal
@@ -49,13 +44,15 @@ b.onclick = function() {
 s.onclick = function() {
   m.style.display = "none";
 }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == m) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  } else if (event.target == m) {
     m.style.display = "none";
   }
 }
+
 function func1()
 {
  window.location.href="html/bloglist.html";

@@ -1,10 +1,10 @@
 .post {
     position: relative;
-    width: 34%;
+    width: 42%;
     height: 20%;
     background: #fff;
     box-shadow:0 4px 10px 0 rgba(17, 4, 63, 0.2),0 4px 20px 0 rgba(79, 19, 97, 0.19);
-    margin: 10px 10px 10px 20px;
+    margin: 8px 4% 8px 4%;
     float:left;
     border-radius: 15px;
     
@@ -128,6 +128,11 @@ body {
     
         .post-title{
         font-size: 16px;}
+    }
+@media only screen and (max-width: 360px) {
+    
+        .post-title{
+        font-size: 10px;}
     }
 
 /* The Close Button */

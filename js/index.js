@@ -17,11 +17,6 @@ span.onclick = function() {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
 
 //For signup modal
@@ -45,11 +40,39 @@ s.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == m) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  } else if (event.target == m) {
     m.style.display = "none";
   }
 }
 function func1()
 {
  window.location.href="html/bloglist.html";
+}
+
+
+var postmodal = document.getElementById('posttmodal');
+
+// Get the button that opens the modal
+var postbtn = document.getElementById("create-post");
+
+// Get the <span> element that closes the modal
+var postspan = document.getElementsByClassName("postclose")[0];
+
+// When the user clicks the button, open the modal 
+postbtn.onclick = function() {
+  postmodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+postspan.onclick = function() {
+  postmodal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == postmodal) {
+    postmodal.style.display = "none";
+  }
 }
